@@ -1,0 +1,29 @@
+{
+  "feature_names": [
+    "name_exact_raw",
+    "name_exact_norm",
+    "name_token_sort_ratio",
+    "name_token_set_ratio",
+    "name_jaro_winkler",
+    "name_levenshtein_ratio",
+    "name_char_sim",
+    "name_substring_containment",
+    "addr_exact_norm",
+    "addr_token_sort_ratio",
+    "addr_token_set_ratio",
+    "addr_token_jaccard",
+    "addr_char_sim",
+    "addr_num_overlap",
+    "addr_postal_match",
+    "country_agreement",
+    "s1_name_missing",
+    "t_name_missing",
+    "s1_addr_missing",
+    "t_addr_missing",
+    "candidate_rank",
+    "blocking_pass_count",
+    "name_x_addr",
+    "name_diff_addr"
+  ],
+  "count": 24
+}

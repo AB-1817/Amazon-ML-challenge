@@ -1,0 +1,155 @@
+"""Append Section 27 (artifacts v2) + Section 28 (final summary)."""
+import json
+
+NB = r'c:\Users\akash\OneDrive\Desktop\Amazon ML Challenge\notebooks\train_matching_model_colab.ipynb'
+
+with open(NB, 'r', encoding='utf-8') as f:
+    nb = json.load(f)
+
+def md(src): return {"cell_type":"markdown","metadata":{},"source":src}
+def code(src): return {"cell_type":"code","execution_count":None,"metadata":{},"outputs":[],"source":src}
+
+# ── Section 27 ─────────────────────────────────────────────────────────────
+nb['cells'].append(md("### Section 27: Save v2 Artifacts\n"))
+
+src_27 = (
+"import joblib, json as _json, os\n"
+"import numpy as _np2\n"
+"\n"
+"V2_DIR = '/content/experiment_v2'\n"
+"os.makedirs(V2_DIR, exist_ok=True)\n"
+"\n"
+"# Save XGBoost v2\n"
+"xgb_model_v2.save_model(os.path.join(V2_DIR, 'xgboost_v2.json'))\n"
+"\n"
+"# Save CatBoost\n"
+"cb_model.save_model(os.path.join(V2_DIR, 'catboost_v2.cbm'))\n"
+"\n"
+"# Save feature config v2\n"
+"with open(os.path.join(V2_DIR, 'feature_config_v2.json'), 'w') as f:\n"
+"    _json.dump({'feature_names': FEATURE_NAMES_V2, 'count': N_FEAT_V2}, f, indent=2)\n"
+"\n"
+"# Save best model config\n"
+"best_v2_meta = {\n"
+"    'best_model': best_v2_name,\n"
+"    'best_blocking': BEST_STRATEGY,\n"
+"    'K': K_BEST,\n"
+"    'threshold': best_v2_tau,\n"
+"    'macro_f05': best_rows_v2[best_v2_name]['macro_f05'],\n"
+"    'precision': best_rows_v2[best_v2_name]['precision'],\n"
+"    'recall':    best_rows_v2[best_v2_name]['recall'],\n"
+"    'n_val_s1':  best_rows_v2[best_v2_name]['n_val_s1_evaluated'],\n"
+"    'baseline': {'model': 'XGBoost', 'blocking': '8-pass K=25',\n"
+"                 'macro_f05': 0.8841, 'precision': 0.9816, 'recall': 0.7777, 'threshold': 0.80},\n"
+"}\n"
+"with open(os.path.join(V2_DIR, 'best_model_v2.json'), 'w') as f:\n"
+"    _json.dump(best_v2_meta, f, indent=2)\n"
+"\n"
+"# Save val predictions (first 10k rows)\n"
+"import pandas as _pd_v2\n"
+"_vp = _pd_v2.DataFrame({\n"
+"    's1_id':      val_s1_ids_v2[:10000],\n"
+"    'target_id':  val_tgt_ids_v2[:10000],\n"
+"    'label':      y_val_v2[:10000],\n"
+"    'pred_prob':  best_v2_probs[:10000],\n"
+"    'pred_match': (best_v2_probs[:10000] >= best_v2_tau).astype(_np2.int32),\n"
+"})\n"
+"_vp.to_csv(os.path.join(V2_DIR, 'validation_predictions_v2.csv'), index=False)\n"
+"del _vp\n"
+"\n"
+"print(f'v2 artifacts saved to {V2_DIR}/')\n"
+"print(f'  xgboost_v2.json')\n"
+"print(f'  catboost_v2.cbm')\n"
+"print(f'  feature_config_v2.json')\n"
+"print(f'  best_model_v2.json')\n"
+"print(f'  blocking_comparison.csv')\n"
+"print(f'  model_comparison_v2.csv')\n"
+"print(f'  threshold_results_v2.csv')\n"
+"print(f'  validation_predictions_v2.csv')\n"
+"print(f'  error_analysis_v2.csv')\n"
+)
+
+nb['cells'].append(code(src_27))
+
+# ── Section 28 markdown ────────────────────────────────────────────────────
+nb['cells'].append(md(
+"### Section 28: Final Decision Summary\n\n"
+"Objective summary of all measured results. No claims about leaderboard performance.\n"
+))
+
+src_28 = (
+"import pandas as _pd_v2\n"
+"\n"
+"print('=' * 80)\n"
+"print('EXPERIMENT SUMMARY')\n"
+"print('=' * 80)\n"
+"\n"
+"print()\n"
+"print('CURRENT BASELINE:')\n"
+"print(f'  Model:       XGBoost + 8-pass blocking K=25')\n"
+"print(f'  Macro F0.5 = 0.8841  (known result)')\n"
+"print(f'  Precision  = 0.9816')\n"
+"print(f'  Recall     = 0.7777')\n"
+"print(f'  Threshold  = 0.80')\n"
+"print(f'  Val S1     = 30,001')\n"
+"\n"
+"print()\n"
+"print('NEW RESULTS:')\n"
+"print(f'  Best blocking strategy: {BEST_STRATEGY}')\n"
+"print(f'  Candidate recall@{K_BEST}:   {best_block_recall:.4f}')\n"
+"print(f'  Baseline recall@25:    {blocking_results[0][\"recall_at_25\"]:.4f}')\n"
+"recall_delta = best_block_recall - blocking_results[0]['recall_at_25']\n"
+"print(f'  Recall delta:          {recall_delta:+.4f}')\n"
+"\n"
+"print()\n"
+"print('MODEL RESULTS (v2):')\n"
+"for mname, _ in models_v2:\n"
+"    br = best_rows_v2[mname]\n"
+"    print(f'  {mname:<30}  F0.5={br[\"macro_f05\"]:.4f}  P={br[\"precision\"]:.4f}  R={br[\"recall\"]:.4f}  tau={br[\"threshold\"]:.2f}')\n"
+"\n"
+"best_v2_f05 = best_rows_v2[best_v2_name]['macro_f05']\n"
+"f05_delta = best_v2_f05 - 0.8841\n"
+"\n"
+"print()\n"
+"print('ANSWERS TO KEY QUESTIONS:')\n"
+"print(f'  1. Did candidate recall improve?')\n"
+"print(f'     Baseline recall@25 = {blocking_results[0][\"recall_at_25\"]:.4f}')\n"
+"print(f'     Best strategy recall@{K_BEST} = {best_block_recall:.4f}  (delta={recall_delta:+.4f})')\n"
+"print(f'     Answer: {\"YES\" if recall_delta > 0.001 else \"MARGINAL\" if recall_delta > 0 else \"NO\"}')\n"
+"\n"
+"print(f'  2. Did Macro F0.5 improve?')\n"
+"print(f'     Baseline = 0.8841  Best v2 = {best_v2_f05:.4f}  (delta={f05_delta:+.4f})')\n"
+"print(f'     Answer: {\"YES\" if f05_delta > 0.001 else \"MARGINAL\" if f05_delta > 0 else \"NO\"}')\n"
+"\n"
+"print(f'  3. Which model performed best?')\n"
+"print(f'     {best_v2_name}  (Macro F0.5 = {best_v2_f05:.4f})')\n"
+"\n"
+"print(f'  4. What threshold was optimal?')\n"
+"print(f'     tau* = {best_v2_tau:.2f}')\n"
+"\n"
+"print(f'  5. How much improvement occurred?')\n"
+"print(f'     F0.5 delta = {f05_delta:+.4f}  ({f05_delta/0.8841*100:+.2f}% relative)')\n"
+"\n"
+"print(f'  6. Was the improvement empirically meaningful?')\n"
+"print(f'     Evaluated on {best_rows_v2[best_v2_name][\"n_val_s1_evaluated\"]:,} val S1 entities.')\n"
+"print(f'     {\"Improvement is meaningful (>0.005 F0.5).\" if f05_delta > 0.005 else \"Improvement is marginal (<0.005 F0.5). Consider further tuning.\" if f05_delta > 0 else \"No improvement. Baseline remains best.\"}')\n"
+"\n"
+"print(f'  7. What should we use for final production pipeline?')\n"
+"if f05_delta > 0.005:\n"
+"    print(f'     USE: {best_v2_name} + {BEST_STRATEGY} blocking at tau*={best_v2_tau:.2f}')\n"
+"    print(f'     Baseline is superseded by v2 experiment.')\n"
+"else:\n"
+"    print(f'     KEEP: Baseline XGBoost + 8-pass K=25 at tau*=0.80')\n"
+"    print(f'     v2 improvement is insufficient to justify added complexity.')\n"
+"\n"
+"print()\n"
+"print('NOTE: These are VALIDATION results only.')\n"
+"print('      Do NOT proceed to full 1.73M test inference until pipeline is finalized.')\n"
+"print('=' * 80)\n"
+)
+
+nb['cells'].append(code(src_28))
+
+with open(NB, 'w', encoding='utf-8') as f:
+    json.dump(nb, f, indent=2, ensure_ascii=False)
+print(f'Cells: {len(nb["cells"])}  Part10 written.')

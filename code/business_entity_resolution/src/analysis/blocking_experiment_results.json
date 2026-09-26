@@ -1,0 +1,320 @@
+{
+  "eval_config": {
+    "n_eval_s1": 10000,
+    "n_background": 200000,
+    "target_pool_size": 236786,
+    "k_values": [
+      10,
+      25,
+      50,
+      100,
+      200
+    ],
+    "sort_weights": {
+      "name": 0.6,
+      "addr": 0.4
+    },
+    "random_seed": 42
+  },
+  "results": [
+    {
+      "strategy": "A_5pass",
+      "total_pairs": 1277923,
+      "blocking_time_s": 0.47,
+      "peak_mem_mb": 0.0,
+      "raw_recall": 0.7589,
+      "recall_at_k": {
+        "10": 0.7407,
+        "25": 0.7485,
+        "50": 0.7528,
+        "100": 0.7556,
+        "200": 0.7576
+      },
+      "candidate_stats": {
+        "total_pairs": 1277923,
+        "avg_cands": 128.77,
+        "median_cands": 22.0,
+        "p95_cands": 473.0,
+        "p99_cands": 991.0,
+        "max_cands": 1438,
+        "zero_cand_entities": 76
+      },
+      "miss_count": 8870,
+      "miss_categories": {
+        "other": {
+          "count": 1076,
+          "pct": 12.130777903043969
+        },
+        "one_name_missing": {
+          "count": 520,
+          "pct": 5.862457722660654
+        },
+        "no_name_overlap_address_only": {
+          "count": 265,
+          "pct": 2.987598647125141
+        },
+        "only_short_tokens_shared": {
+          "count": 107,
+          "pct": 1.2063134160090192
+        },
+        "name_overlap_no_address": {
+          "count": 32,
+          "pct": 0.36076662908680945
+        }
+      },
+      "sample_misses": [
+        {
+          "s1_id": "S1-254114496",
+          "tgt_id": "S3-777185344",
+          "category": "other",
+          "s1_name": "pinnacle network group",
+          "tgt_name": "group network pinnacle",
+          "s1_addr": "fl 0 in lawrenceburg 22 pebble beach lane",
+          "tgt_addr": "22 pebble beach ln floor 0 lawrenceburg indiana"
+        },
+        {
+          "s1_id": "S1-254114496",
+          "tgt_id": "S2-246002675",
+          "category": "other",
+          "s1_name": "pinnacle network group",
+          "tgt_name": "the pinnacle network group",
+          "s1_addr": "fl 0 in lawrenceburg 22 pebble beach lane",
+          "tgt_addr": "22 pebble beach ln larenceburg in"
+        },
+        {
+          "s1_id": "S1-982103024",
+          "tgt_id": "S3-938037117",
+          "category": "no_name_overlap_address_only",
+          "s1_name": "naganth metal private limited",
+          "tgt_name": "solgild",
+          "s1_addr": "f 108 plot no 1 f f united plaza community centre karkardoom",
+          "tgt_addr": "f 108 plot no 1 f f united plaza community centre karkardoom"
+        },
+        {
+          "s1_id": "S1-966216177",
+          "tgt_id": "S2-769733134",
+          "category": "one_name_missing",
+          "s1_name": "jay baba consultancy private limited",
+          "tgt_name": "",
+          "s1_addr": "d 102 third floor parmar pavan next to fakhri hills kondhwa ",
+          "tgt_addr": "d 10 third floor parmar pavan next to fakhri hills kondhwa p"
+        },
+        {
+          "s1_id": "S1-966216177",
+          "tgt_id": "S2-308333955",
+          "category": "one_name_missing",
+          "s1_name": "jay baba consultancy private limited",
+          "tgt_name": "",
+          "s1_addr": "d 102 third floor parmar pavan next to fakhri hills kondhwa ",
+          "tgt_addr": "maharashtra third floor d 10 parmar pavan next to fakhri hil"
+        }
+      ]
+    },
+    {
+      "strategy": "B_8pass",
+      "total_pairs": 1430376,
+      "blocking_time_s": 0.55,
+      "peak_mem_mb": 0.0,
+      "raw_recall": 0.8199,
+      "recall_at_k": {
+        "10": 0.7962,
+        "25": 0.8064,
+        "50": 0.8121,
+        "100": 0.8158,
+        "200": 0.8182
+      },
+      "candidate_stats": {
+        "total_pairs": 1430376,
+        "avg_cands": 143.74,
+        "median_cands": 51.0,
+        "p95_cands": 487.5,
+        "p99_cands": 991.0,
+        "max_cands": 1596,
+        "zero_cand_entities": 49
+      },
+      "miss_count": 6625,
+      "miss_categories": {
+        "other": {
+          "count": 995,
+          "pct": 15.018867924528301
+        },
+        "one_name_missing": {
+          "count": 647,
+          "pct": 9.766037735849057
+        },
+        "no_name_overlap_address_only": {
+          "count": 217,
+          "pct": 3.2754716981132073
+        },
+        "only_short_tokens_shared": {
+          "count": 102,
+          "pct": 1.539622641509434
+        },
+        "name_overlap_no_address": {
+          "count": 39,
+          "pct": 0.5886792452830188
+        }
+      },
+      "sample_misses": [
+        {
+          "s1_id": "S1-254114496",
+          "tgt_id": "S3-777185344",
+          "category": "other",
+          "s1_name": "pinnacle network group",
+          "tgt_name": "group network pinnacle",
+          "s1_addr": "fl 0 in lawrenceburg 22 pebble beach lane",
+          "tgt_addr": "22 pebble beach ln floor 0 lawrenceburg indiana"
+        },
+        {
+          "s1_id": "S1-254114496",
+          "tgt_id": "S2-246002675",
+          "category": "other",
+          "s1_name": "pinnacle network group",
+          "tgt_name": "the pinnacle network group",
+          "s1_addr": "fl 0 in lawrenceburg 22 pebble beach lane",
+          "tgt_addr": "22 pebble beach ln larenceburg in"
+        },
+        {
+          "s1_id": "S1-982103024",
+          "tgt_id": "S3-938037117",
+          "category": "no_name_overlap_address_only",
+          "s1_name": "naganth metal private limited",
+          "tgt_name": "solgild",
+          "s1_addr": "f 108 plot no 1 f f united plaza community centre karkardoom",
+          "tgt_addr": "f 108 plot no 1 f f united plaza community centre karkardoom"
+        },
+        {
+          "s1_id": "S1-966216177",
+          "tgt_id": "S2-769733134",
+          "category": "one_name_missing",
+          "s1_name": "jay baba consultancy private limited",
+          "tgt_name": "",
+          "s1_addr": "d 102 third floor parmar pavan next to fakhri hills kondhwa ",
+          "tgt_addr": "d 10 third floor parmar pavan next to fakhri hills kondhwa p"
+        },
+        {
+          "s1_id": "S1-966216177",
+          "tgt_id": "S2-308333955",
+          "category": "one_name_missing",
+          "s1_name": "jay baba consultancy private limited",
+          "tgt_name": "",
+          "s1_addr": "d 102 third floor parmar pavan next to fakhri hills kondhwa ",
+          "tgt_addr": "maharashtra third floor d 10 parmar pavan next to fakhri hil"
+        }
+      ]
+    },
+    {
+      "strategy": "C_13pass",
+      "total_pairs": 6301739,
+      "blocking_time_s": 1.5,
+      "peak_mem_mb": 0.0,
+      "raw_recall": 0.8677,
+      "recall_at_k": {
+        "10": 0.8301,
+        "25": 0.844,
+        "50": 0.8504,
+        "100": 0.8563,
+        "200": 0.8622
+      },
+      "candidate_stats": {
+        "total_pairs": 6301739,
+        "avg_cands": 630.74,
+        "median_cands": 333.0,
+        "p95_cands": 2312.0,
+        "p99_cands": 2502.0,
+        "max_cands": 3319,
+        "zero_cand_entities": 9
+      },
+      "miss_count": 4865,
+      "miss_categories": {
+        "one_name_missing": {
+          "count": 922,
+          "pct": 18.95169578622816
+        },
+        "other": {
+          "count": 628,
+          "pct": 12.90853031860226
+        },
+        "no_name_overlap_address_only": {
+          "count": 297,
+          "pct": 6.104830421377184
+        },
+        "only_short_tokens_shared": {
+          "count": 126,
+          "pct": 2.5899280575539567
+        },
+        "name_overlap_no_address": {
+          "count": 27,
+          "pct": 0.5549845837615622
+        }
+      },
+      "sample_misses": [
+        {
+          "s1_id": "S1-982103024",
+          "tgt_id": "S3-938037117",
+          "category": "no_name_overlap_address_only",
+          "s1_name": "naganth metal private limited",
+          "tgt_name": "solgild",
+          "s1_addr": "f 108 plot no 1 f f united plaza community centre karkardoom",
+          "tgt_addr": "f 108 plot no 1 f f united plaza community centre karkardoom"
+        },
+        {
+          "s1_id": "S1-966216177",
+          "tgt_id": "S2-769733134",
+          "category": "one_name_missing",
+          "s1_name": "jay baba consultancy private limited",
+          "tgt_name": "",
+          "s1_addr": "d 102 third floor parmar pavan next to fakhri hills kondhwa ",
+          "tgt_addr": "d 10 third floor parmar pavan next to fakhri hills kondhwa p"
+        },
+        {
+          "s1_id": "S1-966216177",
+          "tgt_id": "S2-308333955",
+          "category": "one_name_missing",
+          "s1_name": "jay baba consultancy private limited",
+          "tgt_name": "",
+          "s1_addr": "d 102 third floor parmar pavan next to fakhri hills kondhwa ",
+          "tgt_addr": "maharashtra third floor d 10 parmar pavan next to fakhri hil"
+        },
+        {
+          "s1_id": "S1-572756817",
+          "tgt_id": "S2-486929326",
+          "category": "one_name_missing",
+          "s1_name": "ram business private limited",
+          "tgt_name": "",
+          "s1_addr": "302 sea jewel property poddar road malad east mumbai mumbai ",
+          "tgt_addr": "mumbai maharashtra 302 sea jewel property poddar road malad "
+        },
+        {
+          "s1_id": "S1-572756817",
+          "tgt_id": "S3-917711607",
+          "category": "one_name_missing",
+          "s1_name": "ram business private limited",
+          "tgt_name": "",
+          "s1_addr": "302 sea jewel property poddar road malad east mumbai mumbai ",
+          "tgt_addr": "mumbai city mumbai 302 mh"
+        }
+      ]
+    },
+    {
+      "strategy": "D_8pass_chunked2000",
+      "total_pairs": 1430376,
+      "blocking_time_s": 2.07,
+      "peak_mem_mb": 0.3,
+      "raw_recall": 0.8199,
+      "recall_at_k": {},
+      "candidate_stats": {
+        "total_pairs": 1430376,
+        "avg_cands": 143.74,
+        "median_cands": 51.0,
+        "p95_cands": 487.5,
+        "p99_cands": 991.0,
+        "max_cands": 1596,
+        "zero_cand_entities": 49
+      },
+      "miss_count": 6625,
+      "miss_categories": {},
+      "sample_misses": []
+    }
+  ]
+}

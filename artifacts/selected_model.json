@@ -1,0 +1,10 @@
+{
+  "selected_model": "LogisticRegression",
+  "optimal_threshold": 0.6,
+  "validation_macro_f05": 0.8911,
+  "validation_precision": 0.9751,
+  "validation_recall": 0.7948,
+  "validation_s1_count": 3002,
+  "train_s1_count": 11998,
+  "artifact_path": "logistic_regression/model.joblib"
+}

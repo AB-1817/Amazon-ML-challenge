@@ -1,0 +1,10 @@
+{
+  "total_s1": 2206821,
+  "singletons": 123247,
+  "one_match": 119157,
+  "two_matches": 375212,
+  "three_plus": 1589205,
+  "total_links": 7638365.0,
+  "avg_matches": 3.461,
+  "cross_country": 0
+}

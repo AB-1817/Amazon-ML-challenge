@@ -1,0 +1,11 @@
+{
+  "k_candidates": 25,
+  "seed": 42,
+  "s1_limit": 15000,
+  "val_fraction": 0.2,
+  "blocking_passes": 8,
+  "pre_ranking_weights": {
+    "name": 0.6,
+    "address": 0.4
+  }
+}

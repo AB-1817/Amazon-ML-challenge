@@ -1,0 +1,125 @@
+{
+  "strategies": {
+    "1. Exact Normalized Name": {
+      "recall_pct": 18.402540169162126,
+      "hits": 6723,
+      "total_cands": 8478,
+      "reduction_ratio_pct": 99.9996415722119,
+      "dist": {
+        "avg_c": 1.64,
+        "med_c": 1.0,
+        "p95_c": 4.0,
+        "p99_c": 7.0,
+        "max_c": 17
+      }
+    },
+    "2. First Significant Name Token (p1)": {
+      "recall_pct": 67.39660033394466,
+      "hits": 24622,
+      "total_cands": 1188541,
+      "reduction_ratio_pct": 99.94975157800393,
+      "dist": {
+        "avg_c": 138.38,
+        "med_c": 61.0,
+        "p95_c": 453.0,
+        "p99_c": 627.0,
+        "max_c": 1447
+      }
+    },
+    "3. Two-Token Name Prefix (p2)": {
+      "recall_pct": 58.76057263296198,
+      "hits": 21467,
+      "total_cands": 157922,
+      "reduction_ratio_pct": 99.99332346860692,
+      "dist": {
+        "avg_c": 16.9,
+        "med_c": 3.0,
+        "p95_c": 33.0,
+        "p99_c": 409.0,
+        "max_c": 458
+      }
+    },
+    "4. Address Anchor (Door + Postal)": {
+      "recall_pct": 0.6925245668299893,
+      "hits": 253,
+      "total_cands": 253,
+      "reduction_ratio_pct": 99.99998930381807,
+      "dist": {
+        "avg_c": 2.58,
+        "med_c": 2.0,
+        "p95_c": 6.0,
+        "p99_c": 7.030000000000001,
+        "max_c": 8
+      }
+    },
+    "5. Address Anchor (Door + Addr Token)": {
+      "recall_pct": 18.03848575260723,
+      "hits": 6590,
+      "total_cands": 34073,
+      "reduction_ratio_pct": 99.99855948218642,
+      "dist": {
+        "avg_c": 11.11,
+        "med_c": 8.0,
+        "p95_c": 32.0,
+        "p99_c": 49.0,
+        "max_c": 71
+      }
+    },
+    "6. Compact Name Prefix (cmp6)": {
+      "recall_pct": 76.97150521446363,
+      "hits": 28120,
+      "total_cands": 1038283,
+      "reduction_ratio_pct": 99.95610409541163,
+      "dist": {
+        "avg_c": 106.06,
+        "med_c": 11.0,
+        "p95_c": 477.0,
+        "p99_c": 660.0,
+        "max_c": 1525
+      }
+    },
+    "7. Combined Multi-Pass Blocking": {
+      "recall_pct": 85.11209043878138,
+      "hits": 31094,
+      "total_cands": 2640905,
+      "reduction_ratio_pct": 99.88834940579116,
+      "dist": {
+        "avg_c": 264.57,
+        "med_c": 164.0,
+        "p95_c": 791.0,
+        "p99_c": 1594.5700000000015,
+        "max_c": 3162
+      }
+    }
+  },
+  "budgets": {
+    "10": {
+      "recall_pct": 24.963731420907127,
+      "hits": 9120,
+      "total_pairs": 93048
+    },
+    "15": {
+      "recall_pct": 30.063230503927958,
+      "hits": 10983,
+      "total_pairs": 133698
+    },
+    "25": {
+      "recall_pct": 36.05781074644842,
+      "hits": 13173,
+      "total_pairs": 208453
+    },
+    "50": {
+      "recall_pct": 43.872663071743354,
+      "hits": 16028,
+      "total_pairs": 375176
+    },
+    "100": {
+      "recall_pct": 52.653765089097526,
+      "hits": 19236,
+      "total_pairs": 672144
+    }
+  },
+  "eval_s1": 10000,
+  "eval_true_links": 36533,
+  "target_pool": 236533
+}

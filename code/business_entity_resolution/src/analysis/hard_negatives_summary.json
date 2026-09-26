@@ -1,0 +1,138 @@
+{
+  "same_name_diff_entity": [
+    {
+      "s1_id": "S1-312042439",
+      "s1_name": "Summit Inc",
+      "s1_addr": "Monroe, ME, 3 Dahlia Farm Road",
+      "t_id": "S2-163963287",
+      "t_name": "Summit Inc",
+      "t_addr": "GREENSBORO, NC, 19 1/2 STARDUST TRAIL",
+      "country": "US"
+    },
+    {
+      "s1_id": "S1-205894984",
+      "s1_name": "Nion",
+      "s1_addr": "11087 St Henry Street W, Ferdinand, IN",
+      "t_id": "S2-378707035",
+      "t_name": "Nion",
+      "t_addr": "7100 BRIGHAM ROAD, HENRICO COUNTY, VA",
+      "country": "US"
+    },
+    {
+      "s1_id": "S1-536126146",
+      "s1_name": "Division of Sanitation",
+      "s1_addr": "1110 Oculus Drive, Unit 1609, Raleigh, NC",
+      "t_id": "S2-401480583",
+      "t_name": "Division of Sanitation",
+      "t_addr": "IN, 2178 WILLOW LANE, PERU",
+      "country": "US"
+    },
+    {
+      "s1_id": "S1-690232989",
+      "s1_name": "Solstice LLC",
+      "s1_addr": "151 Platinum Drive, Unit Apt 11, Fayetteville, AR",
+      "t_id": "S2-208005980",
+      "t_name": "Solstice LLC",
+      "t_addr": "303 MCCORD ROAD, ROUNDUP, MT",
+      "country": "US"
+    },
+    {
+      "s1_id": "S1-652380533",
+      "s1_name": "Family Specialists",
+      "s1_addr": "1035 Mediterranean Avenue, Unit 31, Columbus, OH",
+      "t_id": "S2-857681318",
+      "t_name": "Family Specialists",
+      "t_addr": "4733 LIBERTY RODA, SALEM, OR",
+      "country": "US"
+    }
+  ],
+  "same_addr_diff_entity": [
+    {
+      "s1_id": "S1-897351320",
+      "s1_name": "Crestline LLC",
+      "s1_addr": "1618 Avondale Street, Muskogee, OK",
+      "t_id": "S2-733961326",
+      "t_name": "Crestline",
+      "t_addr": "1618 AVONDALE STREET, MUSKOGEE, OK",
+      "country": "US"
+    },
+    {
+      "s1_id": "S1-706449453",
+      "s1_name": "GHR Custom Rent Inc",
+      "s1_addr": "1310 233, Stephenville, TX",
+      "t_id": "S2-420572254",
+      "t_name": "GHR CUSTOM RENT [ÍNC]",
+      "t_addr": "1310 233, STEPHENVILLE, TX",
+      "country": "US"
+    },
+    {
+      "s1_id": "S1-508005859",
+      "s1_name": "Behavioral Health Prime Group",
+      "s1_addr": "16400 Deerview Drive, Urbandale, IA",
+      "t_id": "S2-2405681",
+      "t_name": "healthbehavioralprime.com",
+      "t_addr": "16400 DEERVIEW DRIVE, URBANDALE, IA",
+      "country": "US"
+    },
+    {
+      "s1_id": "S1-406277029",
+      "s1_name": "ID Aquaculture Pvt. Ltd.",
+      "s1_addr": "At G. No. 131, Pimperkhed Ghansawangi S/Dn. Dist Jalna, Jalna, Maharashtra",
+      "t_id": "S2-636150125",
+      "t_name": "ID Aquaculture Pvt. Ltd",
+      "t_addr": "AT G. NO. 131, PIMPERKHED GHANSAWANGI S/DN. DIST JALNA, JALNA, Maharashtra",
+      "country": "India"
+    },
+    {
+      "s1_id": "S1-366365009",
+      "s1_name": "New Life Israel",
+      "s1_addr": "14046 Mill Spring Court, Bryantown, MD",
+      "t_id": "S2-719614937",
+      "t_name": "-- VANTAGEARIA",
+      "t_addr": "14046 MILL SPRING COURT, BRYANTOWN, MD",
+      "country": "US"
+    }
+  ],
+  "generic_names": [
+    {
+      "business_name": "Chiropractic Group",
+      "freq": 9
+    },
+    {
+      "business_name": "Internal Medicine Group",
+      "freq": 8
+    },
+    {
+      "business_name": "Meridian LLC",
+      "freq": 7
+    },
+    {
+      "business_name": "Primary Care Group",
+      "freq": 7
+    },
+    {
+      "business_name": "Urgent Care Physicians LLC",
+      "freq": 6
+    },
+    {
+      "business_name": "Happy Deli",
+      "freq": 6
+    },
+    {
+      "business_name": "Cardiology Care Associates",
+      "freq": 6
+    },
+    {
+      "business_name": "Commission on Aging",
+      "freq": 6
+    },
+    {
+      "business_name": "Cardiology Center LLC",
+      "freq": 6
+    },
+    {
+      "business_name": "Pediatric Dental Group",
+      "freq": 6
+    }
+  ]
+}

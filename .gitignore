@@ -1,0 +1,48 @@
+# ── Dataset / large binary files ──────────────────────────────────────────
+*.zip
+*.tsv
+*.csv.gz
+*.parquet
+*.pdf
+*.jpeg
+*.jpg
+*.png
+
+# ── DuckDB databases and temp storage ─────────────────────────────────────
+*.duckdb
+*.duckdb.wal
+*.duckdb.tmp/
+*.tmp/
+
+# ── Model artifacts (large binaries) ──────────────────────────────────────
+artifacts/logistic_regression/model.joblib
+artifacts/logistic_regression/scaler.joblib
+artifacts/xgboost/xgboost_model.json
+
+# ── Python cache ──────────────────────────────────────────────────────────
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# ── Jupyter checkpoints ───────────────────────────────────────────────────
+.ipynb_checkpoints/
+
+# ── OS files ──────────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ── Virtual environments ──────────────────────────────────────────────────
+venv/
+.venv/
+env/
+
+# ── IDE ───────────────────────────────────────────────────────────────────
+.vscode/
+.idea/
+
+# ── Temp / scratch outputs ────────────────────────────────────────────────
+.tmp/
+output/

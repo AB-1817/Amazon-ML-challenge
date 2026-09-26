@@ -1,0 +1,77 @@
+{
+  "train_source1.tsv": {
+    "path": "C:\\Users\\akash\\OneDrive\\Desktop\\Amazon ML Challenge\\6ab10eb3b23ba_student_resource\\student_resource\\dataset\\train\\train_source1.tsv",
+    "size_mb": 200.33808994293213,
+    "rows": 2206821,
+    "columns": {
+      "entity_id": "VARCHAR",
+      "business_name": "VARCHAR",
+      "business_address": "VARCHAR",
+      "country": "VARCHAR"
+    }
+  },
+  "train_source2.tsv": {
+    "path": "C:\\Users\\akash\\OneDrive\\Desktop\\Amazon ML Challenge\\6ab10eb3b23ba_student_resource\\student_resource\\dataset\\train\\train_source2.tsv",
+    "size_mb": 466.63426208496094,
+    "rows": 5034616,
+    "columns": {
+      "entity_id": "VARCHAR",
+      "business_name": "VARCHAR",
+      "business_address": "VARCHAR",
+      "country": "VARCHAR"
+    }
+  },
+  "train_source3.tsv": {
+    "path": "C:\\Users\\akash\\OneDrive\\Desktop\\Amazon ML Challenge\\6ab10eb3b23ba_student_resource\\student_resource\\dataset\\train\\train_source3.tsv",
+    "size_mb": 480.3711290359497,
+    "rows": 5285603,
+    "columns": {
+      "entity_id": "VARCHAR",
+      "business_name": "VARCHAR",
+      "business_address": "VARCHAR",
+      "country": "VARCHAR"
+    }
+  },
+  "train_ground_truth.tsv": {
+    "path": "C:\\Users\\akash\\OneDrive\\Desktop\\Amazon ML Challenge\\6ab10eb3b23ba_student_resource\\student_resource\\dataset\\train\\train_ground_truth.tsv",
+    "size_mb": 121.13149929046631,
+    "rows": 2206821,
+    "columns": {
+      "source1_entity_id": "VARCHAR",
+      "matched_entity_ids": "VARCHAR"
+    }
+  },
+  "test_source1.tsv": {
+    "path": "C:\\Users\\akash\\OneDrive\\Desktop\\Amazon ML Challenge\\6ab10eb3b23ba_student_resource\\student_resource\\dataset\\test\\test_source1.tsv",
+    "size_mb": 166.9140682220459,
+    "rows": 1732544,
+    "columns": {
+      "entity_id": "VARCHAR",
+      "business_name": "VARCHAR",
+      "business_address": "VARCHAR",
+      "country": "VARCHAR"
+    }
+  },
+  "test_source2.tsv": {
+    "path": "C:\\Users\\akash\\OneDrive\\Desktop\\Amazon ML Challenge\\6ab10eb3b23ba_student_resource\\student_resource\\dataset\\test\\test_source2.tsv",
+    "size_mb": 485.855504989624,
+    "rows": 4887273,
+    "columns": {
+      "entity_id": "VARCHAR",
+      "business_name": "VARCHAR",
+      "business_address": "VARCHAR",
+      "country": "VARCHAR"
+    }
+  },
+  "test_source3.tsv": {
+    "path": "C:\\Users\\akash\\OneDrive\\Desktop\\Amazon ML Challenge\\6ab10eb3b23ba_student_resource\\student_resource\\dataset\\test\\test_source3.tsv",
+    "size_mb": 482.5618476867676,
+    "rows": 5082316,
+    "columns": {
+      "entity_id": "VARCHAR",
+      "business_name": "VARCHAR",
+      "business_address": "VARCHAR",
+      "country": "VARCHAR"
+    }
+  }
+}
